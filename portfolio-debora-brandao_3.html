@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Débora Brandão — Social Media Estratégica · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F9F5EE;
+    --warm-white: #FDFAF5;
+    --gold: #B5893A;
+    --gold-light: #D4AA5A;
+    --gold-dark: #8B6520;
+    --dark: #1C140A;
+    --dark-mid: #2E2015;
+    --mid: #5C4A2A;
+    --text: #3A2C14;
+    --text-light: #7A6645;
+    --line: rgba(181,137,58,0.2);
+    --shadow: rgba(28,20,10,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ─────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(181,137,58,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(181,137,58,0.05) 0%, transparent 60%);
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 300;
+    color: #F9F5EE;
+    line-height: 1.0;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(249,245,238,0.5);
+    margin-bottom: 50px;
+  }
+
+  .hero-statement {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 400;
+    color: rgba(249,245,238,0.85);
+    line-height: 1.55;
+    max-width: 480px;
+    margin-bottom: 50px;
+  }
+
+  .hero-statement strong {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: var(--gold);
+    padding: 16px 32px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+
+  .hero-cta:hover { background: var(--gold-light); }
+
+  .hero-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 40px 0 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-photo-frame {
+    width: 100%;
+    max-width: 420px;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(181,137,58,0.04) 50%, rgba(181,137,58,0.12) 100%);
+    border-left: 1px solid rgba(181,137,58,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .photo-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 300;
+    color: rgba(181,137,58,0.2);
+    line-height: 1;
+    letter-spacing: -4px;
+  }
+
+  .photo-note {
+    font-size: 11px;
+    color: rgba(249,245,238,0.25);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero-numbers {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    display: flex;
+    gap: 50px;
+    z-index: 3;
+  }
+
+  .hero-number {
+    text-align: right;
+  }
+
+  .hero-number-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+
+  .hero-number-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(249,245,238,0.4);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ── NAV STRIP ─────────────────────────────────── */
+  .nav-strip {
+    background: var(--gold);
+    padding: 14px 80px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-strip a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .nav-strip a:hover { opacity: 1; }
+
+  .nav-strip .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    opacity: 1;
+    margin-right: auto;
+    font-style: italic;
+  }
+
+  /* ── SECTION BASE ───────────────────────────────── */
+  section {
+    padding: 100px 80px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+    max-width: 60px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 0;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold-dark); }
+
+  /* ── SOBRE ──────────────────────────────────────── */
+  #sobre {
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .sobre-left .section-title { margin-bottom: 32px; }
+
+  .sobre-body {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 28px;
+  }
+
+  .sobre-body strong { font-weight: 600; color: var(--gold-dark); }
+
+  .sobre-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 36px;
+  }
+
+  .trait {
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--mid);
+    background: transparent;
+  }
+
+  .sobre-right {
+    padding-top: 40px;
+  }
+
+  .sobre-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.5;
+    border-left: 3px solid var(--gold);
+    padding-left: 32px;
+    margin-bottom: 50px;
+  }
+
+  .sobre-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .data-item {
+    padding: 28px 24px;
+    background: var(--cream);
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .data-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--gold-dark);
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .data-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  /* ── POR QUE EU ─────────────────────────────────── */
+  #porque {
+    background: var(--dark);
+  }
+
+  #porque .section-label { color: var(--gold-light); }
+
+  #porque .section-title {
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  .porque-subtitle {
+    font-size: 17px;
+    color: rgba(249,245,238,0.6);
+    margin-bottom: 60px;
+    font-weight: 300;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .requisitos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 20px;
+  }
+
+  .requisito-card {
+    background: rgba(249,245,238,0.03);
+    border: 1px solid rgba(181,137,58,0.15);
+    padding: 40px 32px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .requisito-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+
+  .requisito-card:hover::before { transform: scaleY(1); }
+  .requisito-card:hover { background: rgba(249,245,238,0.05); }
+
+  .req-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: rgba(181,137,58,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .req-vaga {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .req-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .req-proof {
+    font-size: 14px;
+    color: rgba(249,245,238,0.6);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .req-proof strong { color: var(--gold-light); font-weight: 500; }
+
+  /* ── HABILIDADES ────────────────────────────────── */
+  #habilidades {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .hab-left .section-title { margin-bottom: 28px; }
+
+  .hab-desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-light);
+    font-weight: 300;
+  }
+
+  .hab-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 60px;
+  }
+
+  .hab-group {
+    background: var(--warm-white);
+    padding: 32px 28px;
+    border-top: 2px solid var(--gold);
+  }
+
+  .hab-group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hab-group-title .icon {
+    width: 30px;
+    height: 30px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .hab-list {
+    list-style: none;
+  }
+
+  .hab-list li {
+    font-size: 13.5px;
+    color: var(--text-light);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+  }
+
+  .hab-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  .hab-list li:last-child { border-bottom: none; }
+
+  /* ── EXPERIÊNCIA ────────────────────────────────── */
+  #experiencia {
+    background: var(--warm-white);
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .exp-card {
+    background: var(--cream);
+    padding: 44px 40px;
+    position: relative;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .exp-card:hover { border-left-color: var(--gold); }
+
+  .exp-period {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .exp-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .exp-role {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .exp-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .exp-tag {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold-dark);
+    background: rgba(181,137,58,0.08);
+    padding: 5px 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .exp-card.featured {
+    background: var(--dark);
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .exp-card.featured .exp-company,
+  .exp-card.featured .exp-role { color: var(--cream); }
+
+  .exp-card.featured .exp-role { color: rgba(249,245,238,0.5); }
+
+  .exp-card.featured .exp-desc { color: rgba(249,245,238,0.7); }
+
+  .exp-card.featured .exp-period { color: var(--gold-light); }
+
+  .exp-card.featured .exp-tag {
+    color: var(--gold-light);
+    background: rgba(181,137,58,0.15);
+  }
+
+  .featured-right {
+    border-left: 1px solid rgba(181,137,58,0.2);
+    padding-left: 60px;
+  }
+
+  .featured-highlight {
+    padding: 24px;
+    background: rgba(181,137,58,0.08);
+    border-left: 2px solid var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .featured-highlight-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .featured-highlight-text {
+    font-size: 14px;
+    color: rgba(249,245,238,0.8);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ── FORMAÇÃO ────────────────────────────────────── */
+  #formacao {
+    background: var(--cream);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 50px;
+  }
+
+  .form-card {
+    padding: 30px 24px;
+    background: var(--warm-white);
+    border-bottom: 2px solid var(--gold);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--shadow);
+  }
+
+  .form-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .form-institution {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .form-course {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* ── DIFERENCIAIS ───────────────────────────────── */
+  #diferenciais {
+    background: var(--gold);
+    padding: 80px;
+  }
+
+  .dif-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .dif-item { }
+
+  .dif-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: var(--dark);
+    opacity: 0.15;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .dif-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .dif-text {
+    font-size: 14px;
+    color: rgba(28,20,10,0.7);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  #diferenciais .section-label { color: rgba(28,20,10,0.6); }
+  #diferenciais .section-title { color: var(--dark); }
+
+  /* ── VALORES ────────────────────────────────────── */
+  #valores {
+    background: var(--dark-mid);
+    padding: 80px;
+  }
+
+  #valores .section-title { color: var(--cream); margin-bottom: 50px; }
+  #valores .section-label { color: var(--gold-light); }
+
+  .valores-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .valores-statement {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.5;
+    border-left: 2px solid var(--gold);
+    padding-left: 30px;
+  }
+
+  .valores-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .valor-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .valor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .valor-text {
+    font-size: 15px;
+    color: rgba(249,245,238,0.75);
+    line-height: 1.6;
+  }
+
+  .valor-text strong { color: var(--gold-light); font-weight: 500; }
+
+  /* ── CONTATO ────────────────────────────────────── */
+  #contato {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    min-height: 60vh;
+  }
+
+  .contato-left {
+    background: var(--dark);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contato-left .section-label { color: var(--gold-light); }
+  .contato-left .section-title { color: var(--cream); margin-bottom: 40px; }
+
+  .contato-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contato-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contato-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(181,137,58,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    color: var(--gold);
+  }
+
+  .contato-detail {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(249,245,238,0.4);
+    margin-bottom: 4px;
+  }
+
+  .contato-value {
+    font-size: 16px;
+    color: var(--cream);
+    font-weight: 400;
+  }
+
+  .contato-right {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--warm-white);
+  }
+
+  .closing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 28px;
+  }
+
+  .closing-title em { font-style: italic; color: var(--gold-dark); }
+
+  .closing-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 420px;
+  }
+
+  .closing-text strong { color: var(--text); font-weight: 500; }
+
+  .closing-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--dark);
+    padding: 18px 36px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+
+  .closing-cta:hover { background: var(--gold-dark); }
+
+  /* ── FOOTER ─────────────────────────────────────── */
+  .footer {
+    background: var(--dark);
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(181,137,58,0.15);
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(249,245,238,0.3);
+    letter-spacing: 1px;
+  }
+
+  /* ── DIVIDER ─────────────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+    margin: 40px 0;
+  }
+
+  /* ── ANIMATIONS ─────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tag { animation: fadeUp 0.8s ease 0.2s both; }
+  .hero-name { animation: fadeUp 0.8s ease 0.4s both; }
+  .hero-title { animation: fadeUp 0.8s ease 0.5s both; }
+  .hero-statement { animation: fadeUp 0.8s ease 0.6s both; }
+  .hero-cta { animation: fadeUp 0.8s ease 0.8s both; }
+  .photo-initials { animation: fadeUp 1.2s ease 0.3s both; }
+  .hero-numbers { animation: fadeUp 0.8s ease 1s both; }
+
+  /* ── RESPONSIVE ─────────────────────────────────── */
+  @media (max-width: 1024px) {
+    section { padding: 70px 40px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 80px 40px; }
+    #sobre { grid-template-columns: 1fr; gap: 50px; }
+    .requisitos-grid { grid-template-columns: 1fr 1fr; }
+    #habilidades { grid-template-columns: 1fr; }
+    .hab-right { padding-top: 0; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .exp-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .featured-right { border-left: none; border-top: 1px solid rgba(181,137,58,0.2); padding-left: 0; padding-top: 30px; }
+    .form-grid { grid-template-columns: repeat(3, 1fr); }
+    .dif-grid { grid-template-columns: 1fr 1fr; }
+    .valores-grid { grid-template-columns: 1fr; }
+    #contato { grid-template-columns: 1fr; }
+    .nav-strip { padding: 14px 40px; flex-wrap: wrap; gap: 20px; }
+    .hero-numbers { position: static; margin-top: 40px; justify-content: flex-start; }
+  }
+
+  @media (max-width: 640px) {
+    section { padding: 60px 24px; }
+    .nav-strip { display: none; }
+    .requisitos-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    .dif-grid { grid-template-columns: 1fr; }
+    .sobre-data { grid-template-columns: 1fr; }
+    .valores-items { grid-template-columns: 1fr; }
+    .contato-left, .contato-right { padding: 50px 24px; }
+    .footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+    #diferenciais { padding: 60px 24px; }
+    #valores { padding: 60px 24px; }
+    .hab-right { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    .nav-strip { display: none; }
+    section { break-inside: avoid; }
+  }
+
+  /* ── SECTIONS REDESENHADAS ────────────────────────── */
+
+  /* POR QUE ESTA VAGA */
+  .maira-wrap { max-width: 1100px; margin: 0 auto; }
+  .maira-intro {
+    font-size: clamp(15px, 1.8vw, 17px);
+    color: rgba(249,245,238,0.5);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin-bottom: 52px;
+  }
+  .maira-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(181,137,58,0.15);
+    margin-bottom: 1px;
+  }
+  .maira-item {
+    background: var(--dark);
+    padding: clamp(28px, 4vw, 48px) clamp(24px, 3.5vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .maira-item-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .maira-item-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    color: rgba(181,137,58,0.18);
+    flex-shrink: 0;
+  }
+  .maira-item-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .maira-item-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+  .maira-item-text {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: rgba(249,245,238,0.65);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .maira-item-text strong { color: var(--gold-light); font-weight: 600; }
+  .maira-quote {
+    background: rgba(249,245,238,0.02);
+    border: 1px solid rgba(181,137,58,0.15);
+    padding: 44px 48px;
+    margin-top: 3px;
+    display: flex; gap: 32px; align-items: flex-start;
+  }
+  .maira-quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px; color: rgba(181,137,58,0.12);
+    line-height: 0.8; flex-shrink: 0; font-style: italic;
+    margin-top: 10px;
+  }
+  .maira-quote-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-style: italic; color: rgba(249,245,238,0.9);
+    line-height: 1.6; margin-bottom: 16px;
+  }
+  .maira-quote-sig {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+  }
+
+  /* UMA PROPOSTA DIRETA */
+  .proposta-section {
+    background: var(--warm-white);
+    padding: clamp(60px, 8vw, 100px) clamp(24px, 6vw, 80px);
+  }
+  .proposta-inner { max-width: 900px; margin: 0 auto; }
+  .proposta-texto {
+    max-width: 660px;
+    margin-bottom: 40px;
+  }
+  .proposta-texto p {
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.8;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .proposta-texto p strong { font-weight: 600; color: var(--gold-dark); }
+  .proposta-box {
+    background: var(--dark);
+    padding: clamp(28px, 4vw, 40px) clamp(24px, 3.5vw, 36px);
+  }
+  .proposta-box-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 24px;
+  }
+  .proposta-items-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(181,137,58,0.1);
+  }
+  .proposta-item {
+    background: rgba(249,245,238,0.02);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 20px 18px;
+  }
+  .proposta-arrow {
+    color: var(--gold);
+    font-size: 18px;
+    margin-top: 1px;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+  .proposta-item-text {
+    font-size: clamp(13px, 1.5vw, 14px);
+    color: rgba(249,245,238,0.8);
+    line-height: 1.7;
+  }
+  @media (max-width: 600px) {
+    .proposta-items-list { grid-template-columns: 1fr; }
+  }
+
+  /* SECTION-DARK-PAD (Por que esta vaga) */
+  .section-dark-pad {
+    background: var(--dark);
+    padding: clamp(60px, 8vw, 100px) clamp(24px, 6vw, 80px);
+  }
+
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero" id="topo">
+  <div class="hero-left">
+    <span class="hero-tag">Social Media Estratégica · 2026</span>
+    <h1 class="hero-name">Débora<br><em>Brandão</em></h1>
+    <p class="hero-title">Estrategista Digital &amp; Social Media</p>
+    <p class="hero-statement">
+      Resultado é consequência de estratégia, não de sorte.<br>
+      Sou a profissional que <strong>pensa, planeja e entrega</strong> — com visão de negócio, disciplina de gestora e a determinação de quem constrói do zero, sem parar.
+    </p>
+    <a href="#porque" class="hero-cta">Ver por que me escolher →</a>
+
+    <div class="hero-numbers">
+      <div class="hero-number">
+        <span class="hero-number-val">5+</span>
+        <span class="hero-number-label">Anos em gestão</span>
+      </div>
+      <div class="hero-number">
+        <span class="hero-number-val">4</span>
+        <span class="hero-number-label">Certificações</span>
+      </div>
+      <div class="hero-number">
+        <span class="hero-number-val">2</span>
+        <span class="hero-number-label">Perfis ativos gerenciados</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-placeholder">
+        <span class="photo-initials">DB</span>
+        <span class="photo-note">Débora Brandão</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════════════ -->
+<nav class="nav-strip">
+  <a href="#topo" class="nav-brand">Débora Brandão</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#porque">Por que eu</a>
+  <a href="#maira">Por que esta vaga</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#experiencia">Experiência</a>
+  <a href="#formacao">Formação</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SOBRE
+═══════════════════════════════════════════════════════════ -->
+<section id="sobre">
+  <div class="sobre-left">
+    <div class="section-label">Quem sou eu</div>
+    <h2 class="section-title">Estrategista.<br>Gestora.<br><em>Construtora.</em></h2>
+    <p class="sobre-body">
+      Sou Débora Brandão — gestora de tráfego, social media estratégica e fundadora da <strong>Claritê Estratégia &amp; Performance</strong>. Há mais de uma década trabalhando em estruturas que exigem <strong>organização, liderança e resultado</strong>.
+    </p>
+    <p class="sobre-body">
+      Comecei no varejo, passei por RH corporativo na multinacional Eaton, e fiz a transição consciente para o digital — porque enxerguei exatamente onde minha <strong>visão sistêmica e minha capacidade de gestão</strong> poderiam gerar mais impacto.
+    </p>
+    <p class="sobre-body">
+      Sou autodidata por natureza: quando não sei algo, vou atrás. Sou perfeccionista, crítica e tenho visão empreendedora. Não executo por executar — entendo o porquê de cada decisão estratégica.
+    </p>
+    <div class="sobre-traits">
+      <span class="trait">Autodidata</span>
+      <span class="trait">Perfeccionista</span>
+      <span class="trait">Visionária</span>
+      <span class="trait">Liderança natural</span>
+      <span class="trait">Pensamento crítico</span>
+      <span class="trait">Guerreira</span>
+      <span class="trait">Fé como fundação</span>
+      <span class="trait">Mãe de três</span>
+    </div>
+  </div>
+
+  <div class="sobre-right">
+    <blockquote class="sobre-quote">
+      "Eu faço sua marca ser vista — e lembrada — pelas pessoas certas. Tráfego, conteúdo e estratégia: tudo que precisa para crescer de verdade."
+    </blockquote>
+
+    <div class="sobre-data">
+      <div class="data-item">
+        <span class="data-val">10+</span>
+        <span class="data-label">Anos de experiência em gestão e liderança</span>
+      </div>
+      <div class="data-item">
+        <span class="data-val">2</span>
+        <span class="data-label">Empresas gerenciadas ou cofundadas</span>
+      </div>
+      <div class="data-item">
+        <span class="data-val">Meta</span>
+        <span class="data-label">Ads · Google Ads · TikTok Ads</span>
+      </div>
+      <div class="data-item">
+        <span class="data-val">100%</span>
+        <span class="data-label">Comprometimento com resultado real</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     POR QUE EU
+═══════════════════════════════════════════════════════════ -->
+<section id="porque">
+  <div class="section-label">A vaga pede — eu tenho</div>
+  <h2 class="section-title" style="color:var(--cream);">Cada requisito,<br>com <em>prova real.</em></h2>
+  <p class="porque-subtitle">A vaga de Social Media para os projetos de Maíra Cardi tem sete exigências claras. Aqui está como eu atendo cada uma delas — sem inventar, sem inflar.</p>
+
+  <div class="requisitos-grid">
+
+    <div class="requisito-card">
+      <div class="req-number">01</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Organização</div>
+      <p class="req-proof">Gerenciei loja de varejo com equipe, estoque, caixa e fornecedores simultaneamente por anos. Na Eaton, coordenei processos de RH com múltiplos sistemas simultâneos. <strong>Organização não é habilidade para mim — é modo de operação.</strong></p>
+    </div>
+
+    <div class="requisito-card">
+      <div class="req-number">02</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Inteligência estratégica (não apenas execução)</div>
+      <p class="req-proof">Sou fundadora de agência. Construo estratégias completas: diagnóstico, planejamento, execução e relatório. Criei proposta comercial para a Casa Fracalossi e estratégia editorial para a LM Scopel RH do zero. <strong>Penso em sistema, não em post.</strong></p>
+    </div>
+
+    <div class="requisito-card">
+      <div class="req-number">03</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Visão de vendas</div>
+      <p class="req-proof">Toda a minha carreira foi orientada a conversão — no varejo, nas admissões de RH, e hoje no tráfego pago. Entendo o ciclo completo: <strong>atrair, engajar, converter e fidelizar.</strong> Não crio conteúdo bonito. Crio conteúdo que vende.</p>
+    </div>
+
+    <div class="requisito-card">
+      <div class="req-number">04</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Experiência real criando conteúdo</div>
+      <p class="req-proof">Gerencio meu perfil profissional @deborarbrandao e o perfil da Claritê com linha editorial estruturada. Criei conteúdo completo para a LM Scopel RH: estáticos, carrosséis com roteiro e reels com scripts. <strong>Conteúdo estratégico, não aleatório.</strong></p>
+    </div>
+
+    <div class="requisito-card">
+      <div class="req-number">05</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Estruturar calendário editorial</div>
+      <p class="req-proof">Estruturei calendários editoriais completos com pilares de conteúdo, arco narrativo mensal e lógica de funil. <strong>Para mim, calendário é uma ferramenta estratégica</strong>, não uma planilha de datas. Cada conteúdo tem propósito dentro de um sistema.</p>
+    </div>
+
+    <div class="requisito-card">
+      <div class="req-number">06</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Gestão de ideias e acompanhamento de postagens</div>
+      <p class="req-proof">Tenho processo de gestão de conteúdo que inclui briefing, produção, revisão e monitoramento de métricas. Além disso, sou gestora de tráfego — <strong>analiso dados e tomo decisão baseada em performance</strong>, não em intuição.</p>
+    </div>
+
+    <div class="requisito-card" style="grid-column: 1 / -1; max-width: 600px;">
+      <div class="req-number">07</div>
+      <div class="req-vaga">A vaga pede</div>
+      <div class="req-title">Cobertura esporádica de eventos (stories e vídeos em tempo real)</div>
+      <p class="req-proof">Tenho mobilidade, criatividade e capacidade de adaptação rápida. Penso em storytelling em tempo real — sei que um evento não é só registrar, é <strong>criar narrativa enquanto acontece.</strong> Esse é o tipo de tarefa que me energiza, não que me assusta.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HABILIDADES
+═══════════════════════════════════════════════════════════ -->
+<section id="habilidades">
+  <div class="hab-left">
+    <div class="section-label">Competências</div>
+    <h2 class="section-title">O que<br><em>efetivamente</em><br>entrego</h2>
+    <div class="divider"></div>
+    <p class="hab-desc">
+      Minha formação é multidisciplinar — e isso é estratégico. Sou gestora de tráfego que entende de conteúdo, social media que entende de dados, e empreendedora que entende de pessoas.<br><br>
+      Esse trio raramente está junto numa só profissional.
+    </p>
+  </div>
+
+  <div class="hab-right">
+
+    <div class="hab-group">
+      <div class="hab-group-title"><span class="icon">📊</span> Estratégia &amp; Dados</div>
+      <ul class="hab-list">
+        <li>Gestão de campanhas Meta Ads, Google Ads e TikTok Ads</li>
+        <li>Análise de métricas e relatórios de performance</li>
+        <li>Gestão de funis de vendas e leads</li>
+        <li>Business Manager, Tag Manager, Google Analytics</li>
+        <li>Acompanhamento e otimização de resultados</li>
+      </ul>
+    </div>
+
+    <div class="hab-group">
+      <div class="hab-group-title"><span class="icon">✍️</span> Conteúdo &amp; Copy</div>
+      <ul class="hab-list">
+        <li>Criação de calendários editoriais estratégicos</li>
+        <li>Copywriting persuasivo (Leandro Ladeira)</li>
+        <li>Storytelling para redes sociais</li>
+        <li>Roteiros completos para Reels e carrosséis</li>
+        <li>Criação visual com Canva (nível avançado)</li>
+      </ul>
+    </div>
+
+    <div class="hab-group">
+      <div class="hab-group-title"><span class="icon">👥</span> Gestão &amp; Liderança</div>
+      <ul class="hab-list">
+        <li>Liderança de equipes (experiência real no varejo)</li>
+        <li>Gestão de processos e múltiplos projetos simultâneos</li>
+        <li>Coordenação de processos seletivos (Eaton)</li>
+        <li>Organização operacional e melhoria contínua</li>
+        <li>Resolução de conflitos e tomada de decisão</li>
+      </ul>
+    </div>
+
+    <div class="hab-group">
+      <div class="hab-group-title"><span class="icon">🎬</span> Produção &amp; Vídeo</div>
+      <ul class="hab-list">
+        <li>Edição de vídeo: cortes, transições e ritmo visual</li>
+        <li>Mecanismos de filmagem: enquadramento, luz e movimento</li>
+        <li>Ganhos visuais: efeitos, sobreposições e identidade estética</li>
+        <li>Storytelling visual para Reels e cobertura de eventos ao vivo</li>
+        <li>Produção nativa de plataforma — sem parecer "produzido demais"</li>
+      </ul>
+    </div>
+
+    <div class="hab-group" style="grid-column: 1 / -1;">
+      <div class="hab-group-title"><span class="icon">🚀</span> Mindset</div>
+      <ul class="hab-list" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 32px;">
+        <li>Autodidata — aprendo rápido e com profundidade</li>
+        <li>Pensamento sistêmico e visão de longo prazo</li>
+        <li>Perfeccionismo com pragmatismo</li>
+        <li>Capacidade de adaptação em tempo real</li>
+        <li>Visão empreendedora e orientação a resultados</li>
+        <li>Autogestão — sem precisar de supervisão constante</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXPERIÊNCIA
+═══════════════════════════════════════════════════════════ -->
+<section id="experiencia">
+  <div class="exp-header">
+    <div>
+      <div class="section-label">Trajetória</div>
+      <h2 class="section-title">Experiência<br><em>que comprova</em></h2>
+    </div>
+  </div>
+
+  <div class="exp-grid">
+
+    <!-- FEATURED: Claritê -->
+    <div class="exp-card featured">
+      <div>
+        <div class="exp-period">2024 — Presente</div>
+        <div class="exp-company">Claritê Estratégia &amp; Performance</div>
+        <div class="exp-role">Co-fundadora · Gestora de Tráfego &amp; Social Media</div>
+        <p class="exp-desc">
+          Fundei junto ao meu marido a Claritê para oferecer estratégia digital completa — unindo tráfego pago, conteúdo e gestão de redes em uma única solução. Responsável por: captação de clientes, criação de estratégias personalizadas, gestão de campanhas e entrega de relatórios. Construída do zero, com visão de escala desde o início.
+        </p>
+        <div class="exp-tags">
+          <span class="exp-tag">Fundadora</span>
+          <span class="exp-tag">Estratégia Digital</span>
+          <span class="exp-tag">Meta Ads</span>
+          <span class="exp-tag">Conteúdo</span>
+          <span class="exp-tag">Gestão de clientes</span>
+        </div>
+      </div>
+      <div class="featured-right">
+        <div class="featured-highlight">
+          <div class="featured-highlight-label">Projeto: LM Scopel RH</div>
+          <div class="featured-highlight-text">Estratégia editorial completa para empresa de RH: calendário mensal, roteiros de Reels, scripts de carrossel e orientação de Stories — tudo alinhado ao posicionamento e à jornada de compra.</div>
+        </div>
+        <div class="featured-highlight">
+          <div class="featured-highlight-label">Projeto: Casa Fracalossi</div>
+          <div class="featured-highlight-text">Proposta comercial estratégica para restaurante e eventos em Bento Gonçalves — incluindo diagnóstico de presença digital, plano de ação e apresentação completa para o cliente.</div>
+        </div>
+        <div class="featured-highlight">
+          <div class="featured-highlight-label">Projeto: Piu Bella Flores</div>
+          <div class="featured-highlight-text">Primeiro cliente da agência — gestão de tráfego e conteúdo para floricultura. Estruturação da presença digital e campanhas de conversão para varejo local.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-period">Dez 2015 — Abr 2019</div>
+      <div class="exp-company">Casarão Bazar</div>
+      <div class="exp-role">Gerente de Loja</div>
+      <p class="exp-desc">
+        Gestão completa de operações: abertura e fechamento, controle financeiro, estoque, compras e equipe. Liderava processos de admissão, feedback e demissão. Responsável pela divulgação e pela experiência do cliente. Aqui desenvolvi visão comercial e liderança na prática.
+      </p>
+      <div class="exp-tags">
+        <span class="exp-tag">Liderança</span>
+        <span class="exp-tag">Gestão financeira</span>
+        <span class="exp-tag">Vendas</span>
+        <span class="exp-tag">RH operacional</span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-period">Jan 2020 — Dez 2021</div>
+      <div class="exp-company">Eaton</div>
+      <div class="exp-role">Estagiária de Recursos Humanos</div>
+      <p class="exp-desc">
+        Empresa multinacional de grande porte. Operação de sistemas corporativos (Oracle, ADP, Folha Soft), coordenação de processos seletivos completos, gestão de benefícios e participação em programas educacionais como o Formare. Ambiente de alta organização e rigor de processos.
+      </p>
+      <div class="exp-tags">
+        <span class="exp-tag">Multinacional</span>
+        <span class="exp-tag">Processos seletivos</span>
+        <span class="exp-tag">Sistemas corporativos</span>
+        <span class="exp-tag">Organização</span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-period">Ago 2012 — Out 2015</div>
+      <div class="exp-company">Nicole Presentes</div>
+      <div class="exp-role">Assistente Administrativa</div>
+      <p class="exp-desc">
+        Gestão de caixa, controle de estoque e apoio em compras. Atendimento ao cliente e suporte nas atividades administrativas da loja. Aqui nasceu minha orientação para o cliente e para o detalhe — desde os 17 anos trabalhando com propósito.
+      </p>
+      <div class="exp-tags">
+        <span class="exp-tag">Atendimento</span>
+        <span class="exp-tag">Administrativo</span>
+        <span class="exp-tag">Varejo</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FORMAÇÃO
+═══════════════════════════════════════════════════════════ -->
+<section id="formacao">
+  <div class="section-label">Formação &amp; Especialização</div>
+  <h2 class="section-title">Aprendo porque <em>acredito</em><br>que conhecimento é vantagem competitiva.</h2>
+
+  <div class="form-grid">
+    <div class="form-card">
+      <span class="form-icon">🎓</span>
+      <div class="form-institution">UCS — Univ. de Caxias do Sul</div>
+      <div class="form-course">Psicologia<br>Compreensão do comportamento humano</div>
+    </div>
+    <div class="form-card">
+      <span class="form-icon">📡</span>
+      <div class="form-institution">Subido PRO</div>
+      <div class="form-course">MBA em Tráfego Pago<br>Pedro Sobral — com acompanhamento direto de equipe</div>
+    </div>
+    <div class="form-card">
+      <span class="form-icon">📱</span>
+      <div class="form-institution">Social Media Estrategista</div>
+      <div class="form-course">Thalita Gonçalves<br>Posicionamento e estratégia de redes sociais</div>
+    </div>
+    <div class="form-card">
+      <span class="form-icon">📖</span>
+      <div class="form-institution">Social Media Storyseller</div>
+      <div class="form-course">Milena Nóbrega<br>Storytelling e criação de conteúdo narrativo</div>
+    </div>
+    <div class="form-card">
+      <span class="form-icon">✍️</span>
+      <div class="form-institution">Copywriting</div>
+      <div class="form-course">Leandro Ladeira<br>Escrita persuasiva e copy de alta conversão</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     POR QUE ESTA VAGA
+═══════════════════════════════════════════════════════════ -->
+<section id="maira" class="section-dark-pad">
+  <div class="maira-wrap">
+
+    <div class="section-label" style="color: var(--gold-light);">Por que esta vaga. Por que este projeto.</div>
+    <h2 class="section-title" style="color:var(--cream); margin-bottom:16px;">Não estou aqui<br>por oportunidade.<br><em>Estou aqui por identificação.</em></h2>
+    <p class="maira-intro">Há vagas que são apenas empregos. E há vagas que parecem ter sido escritas para você. Esta é a segunda.</p>
+
+    <div class="maira-list">
+
+      <div class="maira-item">
+        <div class="maira-item-head">
+          <span class="maira-item-num">01</span>
+          <span class="maira-item-tag">Fé</span>
+        </div>
+        <div class="maira-item-title">A mesma fundação</div>
+        <p class="maira-item-text">Sou evangélica. A fé não é um departamento da minha vida — é a estrutura que sustenta tudo o que faço. Quando vejo Maíra Cardi falar sobre propósito e sobre o que guia suas decisões de negócio, não estou apenas ouvindo uma empresária de sucesso. Estou ouvindo alguém que tomou a mesma decisão que eu: <strong>não separar quem você é do que você constrói.</strong></p>
+        <p class="maira-item-text">Trabalhar com alguém que compartilha essa base não é detalhe. É diferença de cultura inteira.</p>
+      </div>
+
+      <div class="maira-item">
+        <div class="maira-item-head">
+          <span class="maira-item-num">02</span>
+          <span class="maira-item-tag">Mentalidade</span>
+        </div>
+        <div class="maira-item-title">O raciocínio que reconheço</div>
+        <p class="maira-item-text">Maíra Cardi não pensa em curtir. Pensa em sistema. Não pensa em post. Pensa em posicionamento. <strong>Esse é exatamente o meu jeito de pensar.</strong></p>
+        <p class="maira-item-text">No meu briefing de marca, a frase que define minha atuação é: "Resultado é consequência de estratégia, não de sorte." Não é coincidência que ressoa com o que vejo nos projetos dela — é a mesma lógica operando.</p>
+      </div>
+
+      <div class="maira-item">
+        <div class="maira-item-head">
+          <span class="maira-item-num">03</span>
+          <span class="maira-item-tag">Visão de negócio</span>
+        </div>
+        <div class="maira-item-title">Conteúdo que converte, não que entretém por entreter</div>
+        <p class="maira-item-text">A marca Maíra Cardi é um caso de estudo de como posicionamento, autoridade e vendas coexistem sem contradição. <strong>Isso é o que quero aprender de dentro — não de fora.</strong></p>
+        <p class="maira-item-text">Minha formação inteira — tráfego pago, copywriting, social media estratégica — foi construída para atuar exatamente nesse tipo de ambiente: onde conteúdo e performance são inseparáveis.</p>
+      </div>
+
+      <div class="maira-item">
+        <div class="maira-item-head">
+          <span class="maira-item-num">04</span>
+          <span class="maira-item-tag">Marco pessoal</span>
+        </div>
+        <div class="maira-item-title">O projeto que me tornaria outra profissional</div>
+        <p class="maira-item-text">Existem experiências que não cabem no currículo — que mudam o nível de quem você é. Fazer parte dos projetos de Maíra Cardi seria uma dessas experiências. <strong>Não um trampolim. Um marco.</strong></p>
+        <p class="maira-item-text">A escala, o nível de exigência e a proximidade com uma das marcas pessoais mais relevantes do Brasil me forçariam a crescer de formas que nenhum curso produz. Estou completamente pronta para esse nível de entrega.</p>
+      </div>
+
+    </div>
+
+    <div class="maira-quote">
+      <div class="maira-quote-mark">"</div>
+      <div>
+        <p class="maira-quote-body">Não estou buscando um emprego onde me encaixo. Estou buscando um projeto onde faço sentido — onde meus valores, minha visão e minha fé não precisam ficar do lado de fora quando começo a trabalhar.</p>
+        <p class="maira-quote-sig">Débora Brandão</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     DIFERENCIAIS
+═══════════════════════════════════════════════════════════ -->
+<section id="diferenciais">
+  <div class="section-label">Diferenciais reais</div>
+  <h2 class="section-title">O que me<br><em>separa</em> da maioria</h2>
+
+  <div class="dif-grid">
+    <div class="dif-item">
+      <div class="dif-num">01</div>
+      <div class="dif-title">Tráfego + Conteúdo juntos</div>
+      <p class="dif-text">Sou gestora de tráfego que entende de conteúdo. Isso significa que cada post que planejo já considera distribuição, objetivo de campanha e conversão. Não é comum. É raro.</p>
+    </div>
+    <div class="dif-item">
+      <div class="dif-num">02</div>
+      <div class="dif-title">Pensamento de fundadora</div>
+      <p class="dif-text">Fundei minha própria agência. Entendo risco, prazo, entrega e relacionamento com cliente de dentro. Quando trabalho por um projeto, trabalho como se fosse meu.</p>
+    </div>
+    <div class="dif-item">
+      <div class="dif-num">03</div>
+      <div class="dif-title">Bagagem no varejo e RH</div>
+      <p class="dif-text">Gerenciei loja com equipe, caixa e cliente. Trabalhei em multinacional com rigor de processo. Isso me deu maturidade e visão de negócio que cursos não ensinam.</p>
+    </div>
+    <div class="dif-item">
+      <div class="dif-num">04</div>
+      <div class="dif-title">Aprendizado como estilo de vida</div>
+      <p class="dif-text">Sou autodidata. Quando um assunto me interessa ou me falta, vou buscar até dominar. Não peço desculpa por não saber — apresento a solução que encontrei.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VALORES
+═══════════════════════════════════════════════════════════ -->
+<section id="valores">
+  <div class="section-label">Valores &amp; Propósito</div>
+  <h2 class="section-title">Quem eu sou<br>quando ninguém está olhando</h2>
+
+  <div class="valores-grid">
+    <blockquote class="valores-statement">
+      "Fé como fundação. Família como motivação. Excelência como compromisso."
+    </blockquote>
+    <div class="valores-items">
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Fé evangélica</strong> — minha base pessoal que se reflete em integridade, propósito e conduta em tudo que faço.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Honestidade</strong> — entrego o que prometo, comunico o que não sei e proponho solução quando enfrento obstáculos.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Excelência</strong> — sou perfeccionista por temperamento. Isso pode gerar mais trabalho, mas nunca entrega medíocre.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Visão de longo prazo</strong> — não trabalho por tarefa. Trabalho por construção. Quero fazer parte de algo que cresce.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Respeito às pessoas</strong> — tratar bem clientes, equipe e liderança não é protocolo. É caráter.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-dot"></div>
+        <p class="valor-text"><strong>Construção com propósito</strong> — cada projeto que assumo precisa fazer sentido. Aqui, faz muito.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROPOSTA ESPECIAL
+═══════════════════════════════════════════════════════════ -->
+<section id="proposta" class="proposta-section">
+  <div class="proposta-inner">
+    <div class="section-label">Uma proposta direta</div>
+    <h2 class="section-title" style="margin-bottom: 32px;">Estou disposta a <em>provar</em><br>antes de ser contratada.</h2>
+
+    <div class="proposta-texto">
+      <p>
+        Sei que confiança se constrói com prova, não com promessa. Por isso estou aberta a um <strong>período de experiência ou projeto-teste</strong> — sem remuneração inicial — para que você possa avaliar minha entrega, meu pensamento estratégico e minha postura de trabalho antes de qualquer compromisso formal.
+      </p>
+      <p>
+        Não faço isso por insegurança. Faço porque <strong>tenho convicção do meu valor</strong> e entendo que a melhor demonstração de capacidade é a própria entrega. Prefiro mostrar do que apenas descrever.
+      </p>
+      <p>
+        Se a vaga é para alguém que vai pelo que acredita, que não espera condições perfeitas para dar o seu melhor — <strong>estou aqui.</strong>
+      </p>
+    </div>
+
+    <div class="proposta-box">
+      <div class="proposta-box-label">O que um período de teste revelaria</div>
+      <div class="proposta-items-list">
+        <div class="proposta-item">
+          <span class="proposta-arrow">→</span>
+          <p class="proposta-item-text">Como estruturo um calendário editorial do zero — com lógica, pilares e arco narrativo real.</p>
+        </div>
+        <div class="proposta-item">
+          <span class="proposta-arrow">→</span>
+          <p class="proposta-item-text">Como organizo processos, cumpro prazos e comunico com clareza em qualquer situação.</p>
+        </div>
+        <div class="proposta-item">
+          <span class="proposta-arrow">→</span>
+          <p class="proposta-item-text">Como penso em conteúdo com visão de vendas — não apenas com estética ou intuição.</p>
+        </div>
+        <div class="proposta-item">
+          <span class="proposta-arrow">→</span>
+          <p class="proposta-item-text">Como me comporto sob pressão: com calma, autonomia e sem precisar de supervisão constante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MÃE E GESTORA
+═══════════════════════════════════════════════════════════ -->
+<section class="contexto-section-wrap">
+  <div class="contexto-layout">
+    <div class="contexto-intro-col">
+      <div class="section-label" style="color: rgba(28,20,10,0.6);">O contexto que me faz diferente</div>
+      <h2 class="section-title" style="color: var(--dark); margin-bottom: 28px;">Mãe de três.<br>Gestora de tudo.<br><em>Sem desculpa.</em></h2>
+      <p class="contexto-body">
+        Tenho três filhos pequenos — Arthur (4 anos), Théo (2 anos) e Pedro (3 meses). Trabalho em casa, construo uma agência e ainda me candidato a uma posição exigente como esta.
+      </p>
+      <p class="contexto-body">
+        Isso não é um fardo que peço para ignorar. É a prova mais concreta de <strong>quem eu sou quando a vida é complexa:</strong> organizo, priorizo, entrego e não uso circunstância como justificativa para resultado mediano.
+      </p>
+    </div>
+
+    <div class="contexto-cards-col">
+      <div class="contexto-item-card">
+        <div class="contexto-item-title">Disciplina real</div>
+        <p class="contexto-item-text">Quem cria sistema para gerir família, casa, agência e aprendizado contínuo ao mesmo tempo não precisa que ninguém monitore seu trabalho.</p>
+      </div>
+      <div class="contexto-item-card">
+        <div class="contexto-item-title">Motivação que não oscila</div>
+        <p class="contexto-item-text">Trabalho com propósito que vai além do salário — construo liberdade, exemplo e futuro para minha família. Esse tipo de motivação não depende de fase boa.</p>
+      </div>
+      <div class="contexto-item-card">
+        <div class="contexto-item-title">Adaptação em tempo real</div>
+        <p class="contexto-item-text">Quando o plano não funciona, eu não paro — reorganizo. Essa habilidade nasceu na maternidade e se aplica diretamente ao trabalho com criadores e eventos ao vivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contato">
+  <div class="contato-left">
+    <div class="section-label">Fale comigo</div>
+    <h2 class="section-title" style="color:var(--cream); margin-bottom:40px;">Contato</h2>
+
+    <div class="contato-items">
+      <div class="contato-item">
+        <div class="contato-icon">📱</div>
+        <div>
+          <div class="contato-detail">WhatsApp / Telefone</div>
+          <div class="contato-value">(54) 99158-8918</div>
+        </div>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icon">✉️</div>
+        <div>
+          <div class="contato-detail">E-mail</div>
+          <div class="contato-value">contato.deborarbrandao@gmail.com</div>
+        </div>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icon">📸</div>
+        <div>
+          <div class="contato-detail">Instagram Profissional</div>
+          <div class="contato-value">@deborarbrandao</div>
+        </div>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icon">💼</div>
+        <div>
+          <div class="contato-detail">LinkedIn</div>
+          <div class="contato-value">linkedin.com/in/débora-brandão</div>
+        </div>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icon">📍</div>
+        <div>
+          <div class="contato-detail">Localização</div>
+          <div class="contato-value">Caxias do Sul – RS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contato-right">
+    <h3 class="closing-title">Estou pronta<br>para ir<br><em>atrás.</em></h3>
+    <p class="closing-text">
+      A vaga pede alguém fora da curva. <strong>Aqui estou eu.</strong> Com histórico real, estratégia documentada, visão de negócio e a convicção de quem não espera condição perfeita para fazer acontecer.<br><br>
+      Estou disponível para uma conversa, um projeto-teste ou qualquer formato que comprove o que este portfólio descreve. Dou o primeiro passo — sempre.
+    </p>
+    <a href="https://wa.me/5554991588918" class="closing-cta" target="_blank" rel="noopener noreferrer">Entrar em contato →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">Débora Brandão</div>
+  <div class="footer-copy">Portfólio 2026 · Social Media Estratégica · Claritê Estratégia &amp; Performance</div>
+</div>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Subtle parallax on hero
+const heroLeft = document.querySelector('.hero-left');
+window.addEventListener('scroll', () =
